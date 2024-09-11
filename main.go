@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/thiago2santos/entendendo-algoritmos/sorting"
+)
 
 type List[T any] struct {
 	next *List[T]
@@ -12,5 +16,6 @@ func main() {
 	// segundoElemento := List[int]{&primeiroElementoDaLista, 46}
 	// fmt.Println(segundoElemento)
 	arr := []int{131, 940, 632, 902, 454, 469, 352, 381, 185, 920}
-	fmt.Print(arr)
+	fmt.Println(arr)
+	sorting.OrdenarPorSelecao[int](arr)
 }
