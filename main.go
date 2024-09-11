@@ -2,22 +2,15 @@ package main
 
 import "fmt"
 
+type List[T any] struct {
+	next *List[T]
+	val  T
+}
+
 func main() {
-	helloWorld()
-}
-
-func helloWorld() {
-	fmt.Println("Hello, World!")
-	min := GetMin([]int{5, 4, 3, 2, 1})
-	fmt.Println(min)
-}
-
-func GetMin(arr []int) (min int) {
-	min = arr[0]
-	for _, e := range arr {
-		if e < min {
-			min = e
-		}
-	}
-	return
+	// primeiroElementoDaLista := List[int]{nil, 1}
+	// segundoElemento := List[int]{&primeiroElementoDaLista, 46}
+	// fmt.Println(segundoElemento)
+	arr := []int{131, 940, 632, 902, 454, 469, 352, 381, 185, 920}
+	fmt.Print(arr)
 }
